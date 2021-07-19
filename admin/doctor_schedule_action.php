@@ -245,7 +245,7 @@ if(isset($_POST["action"]))
 
 		$object->execute($data);
 
-		$success = '<div class="alert alert-success">Doctor Schedule Data Updated Successfully Updated</div>';
+		$success = '<div class="alert alert-success">Los datos del horario del Doctor se actualizaron con éxito.</div>';
 
 		$output = array(
 			'error'		=>	$error,

@@ -53,21 +53,21 @@ include('header.php');
                                 <table class="table table-striped table-bordered" id="appointment_table">
                                     <thead>
                                         <tr>
-                                            <th>Appointment No.</th>
-                                            <th>Patient Name</th>
+                                            <th>Número de cita</th>
+                                            <th>Nombre del paciente</th>
                                             <?php
                                             if($_SESSION['type'] == 'Admin')
                                             {
                                             ?>
-                                            <th>Doctor Name</th>
+                                            <th>Nombre del Doctor</th>
                                             <?php
                                             }
                                             ?>
-                                            <th>Appointment Date</th>
-                                            <th>Appointment Time</th>
-                                            <th>Appointment Day</th>
-                                            <th>Appointment Status</th>
-                                            <th>View</th>
+                                            <th>Fecha de la cita </th>
+                                            <th>Tiempo de la cita </th>
+                                            <th>Día de la cita</th>
+                                            <th>Estado de la cita </th>
+                                            <th>Visualizar</th>
                                         </tr>
                                     </thead>
                                     <tbody></tbody>
@@ -85,7 +85,7 @@ include('header.php');
         <form method="post" id="edit_appointment_form">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="modal_title">View Appointment Details</h4>
+                    <h4 class="modal-title" id="modal_title">Observar detalles de la cita</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -94,8 +94,8 @@ include('header.php');
                 <div class="modal-footer">
                     <input type="hidden" name="hidden_appointment_id" id="hidden_appointment_id" />
                     <input type="hidden" name="action" value="change_appointment_status" />
-                    <input type="submit" name="save_appointment" id="save_appointment" class="btn btn-primary" value="Save" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" name="save_appointment" id="save_appointment" class="btn btn-primary" value="Guardar" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </form>
