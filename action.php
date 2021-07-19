@@ -138,18 +138,18 @@ if(isset($_POST["action"]))
 					}
 					else
 					{
-						$error = '<div class="alert alert-danger">Wrong Password</div>';
+						$error = '<div class="alert alert-danger">Contraseña Incorrecta</div>';
 					}
 				}
 				else
 				{
-					$error = '<div class="alert alert-danger">Please first verify your email address</div>';
+					$error = '<div class="alert alert-danger">Por favor, verifique su correo electrónico</div>';
 				}
 			}
 		}
 		else
 		{
-			$error = '<div class="alert alert-danger">Wrong Email Address</div>';
+			$error = '<div class="alert alert-danger">Correo electrónico incorrecto</div>';
 		}
 
 		$output = array(
@@ -186,6 +186,7 @@ if(isset($_POST["action"]))
 			$search_query .= 'OR doctor_schedule_table.doctor_schedule_date LIKE "%'.$_POST["search"]["value"].'%" ';
 			$search_query .= 'OR doctor_schedule_table.doctor_schedule_day LIKE "%'.$_POST["search"]["value"].'%" ';
 			$search_query .= 'OR doctor_schedule_table.doctor_schedule_start_time LIKE "%'.$_POST["search"]["value"].'%") ';
+		
 		}
 		
 		if(isset($_POST["order"]))
@@ -240,7 +241,7 @@ if(isset($_POST["action"]))
 
 			$sub_array[] = '
 			<div align="center">
-			<button type="button" name="get_appointment" class="btn btn-primary btn-sm get_appointment" data-doctor_id="'.$row["doctor_id"].'" data-doctor_schedule_id="'.$row["doctor_schedule_id"].'">Get Appointment</button>
+			<button type="button" name="get_appointment" class="btn btn-info btn-sm get_appointment" data-doctor_id="'.$row["doctor_id"].'" data-doctor_schedule_id="'.$row["doctor_schedule_id"].'">Programar cita</button>
 			</div>
 			';
 			$data[] = $sub_array;
@@ -308,7 +309,7 @@ if(isset($_POST["action"]))
 		$doctor_schedule_data = $object->get_result();
 
 		$html = '
-		<h4 class="text-center">Patient Details</h4>
+		<h4 class="text-center">Detalles del paciente</h4>
 		<table class="table">
 		';
 
@@ -316,15 +317,15 @@ if(isset($_POST["action"]))
 		{
 			$html .= '
 			<tr>
-				<th width="40%" class="text-right">Patient Name</th>
+				<th width="40%" class="text-right">Nombre del paciente</th>
 				<td>'.$patient_row["patient_first_name"].' '.$patient_row["patient_last_name"].'</td>
 			</tr>
 			<tr>
-				<th width="40%" class="text-right">Contact No.</th>
+				<th width="40%" class="text-right">Número de contacto</th>
 				<td>'.$patient_row["patient_phone_no"].'</td>
 			</tr>
 			<tr>
-				<th width="40%" class="text-right">Address</th>
+				<th width="40%" class="text-right">Dirección</th>
 				<td>'.$patient_row["patient_address"].'</td>
 			</tr>
 			';
@@ -333,26 +334,26 @@ if(isset($_POST["action"]))
 		$html .= '
 		</table>
 		<hr />
-		<h4 class="text-center">Appointment Details</h4>
+		<h4 class="text-center">Detalles de la cita</h4>
 		<table class="table">
 		';
 		foreach($doctor_schedule_data as $doctor_schedule_row)
 		{
 			$html .= '
 			<tr>
-				<th width="40%" class="text-right">Doctor Name</th>
+				<th width="40%" class="text-right">Nombre del doctor</th>
 				<td>'.$doctor_schedule_row["doctor_name"].'</td>
 			</tr>
 			<tr>
-				<th width="40%" class="text-right">Appointment Date</th>
+				<th width="40%" class="text-right">Fecha de la cita</th>
 				<td>'.$doctor_schedule_row["doctor_schedule_date"].'</td>
 			</tr>
 			<tr>
-				<th width="40%" class="text-right">Appointment Day</th>
+				<th width="40%" class="text-right">Día de la cita</th>
 				<td>'.$doctor_schedule_row["doctor_schedule_day"].'</td>
 			</tr>
 			<tr>
-				<th width="40%" class="text-right">Available Time</th>
+				<th width="40%" class="text-right">Horario Disponible</th>
 				<td>'.$doctor_schedule_row["doctor_schedule_start_time"].' - '.$doctor_schedule_row["doctor_schedule_end_time"].'</td>
 			</tr>
 			';
@@ -381,7 +382,7 @@ if(isset($_POST["action"]))
 
 		if($object->row_count() > 0)
 		{
-			$error = '<div class="alert alert-danger">You have already applied for appointment for this day, try for other day.</div>';
+			$error = '<div class="alert alert-danger">Ya hiciste una cita para ese día, por favor intenta para otro día</div>';
 		}
 		else
 		{

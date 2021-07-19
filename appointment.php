@@ -19,20 +19,20 @@ include('header.php');
 	<br />
 	<div class="card">
 		<span id="message"></span>
-		<div class="card-header"><h4>My Appointment List</h4></div>
+		<div class="card-header"><h4>Mi Lista de Citas</h4></div>
 			<div class="card-body">
 				<div class="table-responsive">
 		      		<table class="table table-striped table-bordered" id="appointment_list_table">
 		      			<thead>
 			      			<tr>
-			      				<th>Appointment No.</th>
-			      				<th>Doctor Name</th>
-			      				<th>Appointment Date</th>
-			      				<th>Appointment Time</th>
-			      				<th>Appointment Day</th>
-			      				<th>Appointment Status</th>
-			      				<th>Download</th>
-			      				<th>Cancel</th>
+			      				<th>Cita No.</th>
+			      				<th>Nombre del Doctor</th>
+			      				<th>Fecha de la Cita</th>
+			      				<th>Horario de la Cita</th>
+			      				<th>Día de la Cita</th>
+			      				<th>Estado de la Cita</th>
+			      				<th>Descargar</th>
+			      				<th>Cancelar</th>
 			      			</tr>
 			      		</thead>
 			      		<tbody></tbody>
@@ -74,7 +74,7 @@ $(document).ready(function(){
 
 	$(document).on('click', '.cancel_appointment', function(){
 		var appointment_id = $(this).data('id');
-		if(confirm("Are you sure you want to cancel this appointment?"))
+		if(confirm("¿Estás seguro que desea cancelar esta cita?"))
 		{
 			$.ajax({
 				url:"action.php",
