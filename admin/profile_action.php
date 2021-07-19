@@ -90,7 +90,7 @@ if($_POST["action"] == 'doctor_profile')
 			";
 			$object->execute($data);
 
-			$success = '<div class="alert alert-success">Doctor Data Updated</div>';
+			$success = '<div class="alert alert-success">Datos del doctor actualizados</div>';
 		}			
 	}
 

@@ -217,7 +217,7 @@ if(isset($_POST["action"]))
 			$doctor_schedule_data = $object->get_result();
 
 			$html = '
-			<h4 class="text-center">Patient Details</h4>
+			<h4 class="text-center">Detalles del paciente </h4>
 			<table class="table">
 			';
 
@@ -225,15 +225,15 @@ if(isset($_POST["action"]))
 			{
 				$html .= '
 				<tr>
-					<th width="40%" class="text-right">Patient Name</th>
+					<th width="40%" class="text-right">Nombre del paciente </th>
 					<td>'.$patient_row["patient_first_name"].' '.$patient_row["patient_last_name"].'</td>
 				</tr>
 				<tr>
-					<th width="40%" class="text-right">Contact No.</th>
+					<th width="40%" class="text-right">Número de contacot</th>
 					<td>'.$patient_row["patient_phone_no"].'</td>
 				</tr>
 				<tr>
-					<th width="40%" class="text-right">Address</th>
+					<th width="40%" class="text-right">Dirección</th>
 					<td>'.$patient_row["patient_address"].'</td>
 				</tr>
 				';
@@ -242,10 +242,10 @@ if(isset($_POST["action"]))
 			$html .= '
 			</table>
 			<hr />
-			<h4 class="text-center">Appointment Details</h4>
+			<h4 class="text-center">Detalles de la cita /h4>
 			<table class="table">
 				<tr>
-					<th width="40%" class="text-right">Appointment No.</th>
+					<th width="40%" class="text-right">Número de cita</th>
 					<td>'.$appointment_row["appointment_number"].'</td>
 				</tr>
 			';
@@ -253,15 +253,15 @@ if(isset($_POST["action"]))
 			{
 				$html .= '
 				<tr>
-					<th width="40%" class="text-right">Doctor Name</th>
+					<th width="40%" class="text-right">Nombre del Doctor</th>
 					<td>'.$doctor_schedule_row["doctor_name"].'</td>
 				</tr>
 				<tr>
-					<th width="40%" class="text-right">Appointment Date</th>
+					<th width="40%" class="text-right">Fecha de la cita</th>
 					<td>'.$doctor_schedule_row["doctor_schedule_date"].'</td>
 				</tr>
 				<tr>
-					<th width="40%" class="text-right">Appointment Day</th>
+					<th width="40%" class="text-right">Día de la cita</th>
 					<td>'.$doctor_schedule_row["doctor_schedule_day"].'</td>
 				</tr>
 				
@@ -270,11 +270,11 @@ if(isset($_POST["action"]))
 
 			$html .= '
 				<tr>
-					<th width="40%" class="text-right">Appointment Time</th>
+					<th width="40%" class="text-right">Tiempo de la cita</th>
 					<td>'.$appointment_row["appointment_time"].'</td>
 				</tr>
 				<tr>
-					<th width="40%" class="text-right">Reason for Appointment</th>
+					<th width="40%" class="text-right">Razón de la cita </th>
 					<td>'.$appointment_row["reason_for_appointment"].'</td>
 				</tr>
 			';
@@ -293,7 +293,7 @@ if(isset($_POST["action"]))
 									<td>Yes</td>
 								</tr>
 								<tr>
-									<th width="40%" class="text-right">Doctor Comment</th>
+									<th width="40%" class="text-right">Comentario del Doctor</th>
 									<td>'.$appointment_row["doctor_comment"].'</td>
 								</tr>
 							';
@@ -302,7 +302,7 @@ if(isset($_POST["action"]))
 						{
 							$html .= '
 								<tr>
-									<th width="40%" class="text-right">Patient come into Hostpital</th>
+									<th width="40%" class="text-right">El paciente entra al hospital</th>
 									<td>
 										<select name="patient_come_into_hospital" id="patient_come_into_hospital" class="form-control" required>
 											<option value="">Select</option>
@@ -317,7 +317,7 @@ if(isset($_POST["action"]))
 					{
 						$html .= '
 							<tr>
-								<th width="40%" class="text-right">Patient come into Hostpital</th>
+								<th width="40%" class="text-right">El paciente entra al hospital</th>
 								<td>
 									<select name="patient_come_into_hospital" id="patient_come_into_hospital" class="form-control" required>
 										<option value="">Select</option>
@@ -337,7 +337,7 @@ if(isset($_POST["action"]))
 						{
 							$html .= '
 								<tr>
-									<th width="40%" class="text-right">Doctor Comment</th>
+									<th width="40%" class="text-right">Comentario del Doctor</th>
 									<td>
 										<textarea name="doctor_comment" id="doctor_comment" class="form-control" rows="8" required>'.$appointment_row["doctor_comment"].'</textarea>
 									</td>
@@ -348,7 +348,7 @@ if(isset($_POST["action"]))
 						{
 							$html .= '
 								<tr>
-									<th width="40%" class="text-right">Doctor Comment</th>
+									<th width="40%" class="text-right">Comentario del Doctor</th>
 									<td>
 										<textarea name="doctor_comment" id="doctor_comment" class="form-control" rows="8" required></textarea>
 									</td>

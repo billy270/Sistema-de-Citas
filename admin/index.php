@@ -25,7 +25,7 @@ if($object->is_login())
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Doctor Appointment Management System in PHP</title>
+    <title>Sistema de gestión de citas médicas</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -88,7 +88,7 @@ if($object->is_login())
 <body class="text-center">
     <main class="form-signin">
          <form method="post" id="login_form">
-            <h1 class="h3 mb-3 fw-normal">Doctor Appointment Management System</h1>
+            <h1 class="h3 mb-3 fw-normal">Sistema de gestión de citas médicas</h1>
             <span id="error"></span>
             <div class="form-group">
                 <input type="text" name="admin_email_address" id="admin_email_address" class="form-control" required autofocus data-parsley-type="email" data-parsley-trigger="keyup" placeholder="Enter Email Address..." />
@@ -97,7 +97,7 @@ if($object->is_login())
                 <input type="password" name="admin_password" id="admin_password" class="form-control" required  data-parsley-trigger="keyup" placeholder="Password" />
             </div>
             <div class="form-group">
-                <button type="submit" name="login_button" id="login_button" class="btn btn-primary btn-user btn-block">Login</button>
+                <button type="submit" name="login_button" id="login_button" class="btn btn-primary btn-user btn-block">Iniciar sesión</button>
             </div>
         </form>
     </main>

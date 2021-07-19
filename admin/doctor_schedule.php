@@ -16,7 +16,7 @@ include('header.php');
 ?>
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Doctor Schedule Management</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Gestión de horarios del Doctor</h1>
 
                     <!-- DataTales Example -->
                     <span id="message"></span>
@@ -24,7 +24,7 @@ include('header.php');
                         <div class="card-header py-3">
                         	<div class="row">
                             	<div class="col">
-                            		<h6 class="m-0 font-weight-bold text-primary">Doctor Schedule List</h6>
+                            		<h6 class="m-0 font-weight-bold text-primary">Lista de horarios del Doctor</h6>
                             	</div>
                             	<div class="col" align="right">
                             		<button type="button" name="add_exam" id="add_doctor_schedule" class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
@@ -40,17 +40,17 @@ include('header.php');
                                             if($_SESSION['type'] == 'Admin')
                                             {
                                             ?>
-                                            <th>Doctor Name</th>
+                                            <th>Nombre del Doctor</th>
                                             <?php
                                             }
                                             ?>
-                                            <th>Schedule Date</th>
-                                            <th>Schedule Day</th>
-                                            <th>Start Time</th>
-                                            <th>End Time</th>
-                                            <th>Consulting Time</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
+                                            <th>Fecha de la cita</th>
+                                            <th>Día de la cita y</th>
+                                            <th>Tiempo de inicio</th>
+                                            <th>Tiempo Final</th>
+                                            <th>Tiempo de la Consulta</th>
+                                            <th>Estado</th>
+                                            <th>Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -70,7 +70,7 @@ include('header.php');
     	<form method="post" id="doctor_schedule_form">
       		<div class="modal-content">
         		<div class="modal-header">
-          			<h4 class="modal-title" id="modal_title">Add Doctor Schedule</h4>
+          			<h4 class="modal-title" id="modal_title">Agregar horario del Doctor</h4>
           			<button type="button" class="close" data-dismiss="modal">&times;</button>
         		</div>
         		<div class="modal-body">
@@ -82,7 +82,7 @@ include('header.php');
                     <div class="form-group">
                         <label>Select Doctor</label>
                         <select name="doctor_id" id="doctor_id" class="form-control" required>
-                            <option value="">Select Doctor</option>
+                            <option value="">Sleccionar Doctor</option>
                             <?php
                             $object->query = "
                             SELECT * FROM doctor_table 
@@ -105,7 +105,7 @@ include('header.php');
                     }
                     ?>
                     <div class="form-group">
-                        <label>Schedule Date</label>
+                        <label>Fecha de la cita</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
@@ -114,7 +114,7 @@ include('header.php');
                         </div>
                     </div>
 		          	<div class="form-group">
-		          		<label>Start Time</label>
+		          		<label>Tiempo de inicio</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-clock"></i></span>
@@ -123,7 +123,7 @@ include('header.php');
                         </div>
 		          	</div>
                     <div class="form-group">
-                        <label>End Time</label>
+                        <label>Tiempo Final</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-clock"></i></span>
@@ -132,13 +132,13 @@ include('header.php');
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Average Consulting Time</label>
+                        <label>Tiempo medio de consulta</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-clock"></i></span>
                             </div>
                             <select name="average_consulting_time" id="average_consulting_time" class="form-control" required>
-                                <option value="">Select Consulting Duration</option>
+                                <option value="">Seleccione la duración de la consulta</option>
                                 <?php
                                 $count = 0;
                                 for($i = 1; $i <= 15; $i++)
@@ -320,7 +320,7 @@ $(document).ready(function(){
 
                 $('#doctor_schedule_end_time').val(data.doctor_schedule_end_time);
 
-	        	$('#modal_title').text('Edit Doctor Schedule Data');
+	        	$('#modal_title').text('Editar datos de programación del doctor');
 
 	        	$('#action').val('Edit');
 
@@ -344,7 +344,7 @@ $(document).ready(function(){
 		{
 			next_status = 'Inactive';
 		}
-		if(confirm("Are you sure you want to "+next_status+" it?"))
+		if(confirm("Estás seguro que quieres "+next_status+"?"))
     	{
 
       		$.ajax({

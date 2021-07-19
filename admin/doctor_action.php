@@ -316,7 +316,7 @@ if(isset($_POST["action"]))
 
 				$object->execute($data);
 
-				$success = '<div class="alert alert-success">Doctor Data Updated</div>';
+				$success = '<div class="alert alert-success">Datos del doctor actualizados</div>';
 			}			
 		}
 
@@ -343,7 +343,7 @@ if(isset($_POST["action"]))
 
 		$object->execute($data);
 
-		echo '<div class="alert alert-success">Class Status change to '.$_POST['next_status'].'</div>';
+		echo '<div class="alert alert-success">Cambio de estado de clase a '.$_POST['next_status'].'</div>';
 	}
 
 	if($_POST["action"] == 'delete')

@@ -26,7 +26,7 @@ include('header.php');
 ?>
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Profile</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Perfil</h1>
 
                     <!-- DataTales Example -->
                     
@@ -35,7 +35,7 @@ include('header.php');
                             <div class="card-header py-3">
                                 <div class="row">
                                     <div class="col">
-                                        <h6 class="m-0 font-weight-bold text-primary">Profile</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Perfil</h6>
                                     </div>
                                     <div clas="col" align="right">
                                         <input type="hidden" name="action" value="doctor_profile" />
@@ -52,11 +52,11 @@ include('header.php');
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Doctor Email Address <span class="text-danger">*</span></label>
+                                                    <label>Correo <span class="text-danger">*</span></label>
                                                     <input type="text" name="doctor_email_address" id="doctor_email_address" class="form-control" required data-parsley-type="email" data-parsley-trigger="keyup" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label>Doctor Password <span class="text-danger">*</span></label>
+                                                    <label>Contraseña <span class="text-danger">*</span></label>
                                                     <input type="password" name="doctor_password" id="doctor_password" class="form-control" required  data-parsley-trigger="keyup" />
                                                 </div>
                                             </div>
@@ -64,11 +64,11 @@ include('header.php');
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Doctor Name <span class="text-danger">*</span></label>
+                                                    <label>Nombre<span class="text-danger">*</span></label>
                                                     <input type="text" name="doctor_name" id="doctor_name" class="form-control" required data-parsley-trigger="keyup" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label>Doctor Phone No. <span class="text-danger">*</span></label>
+                                                    <label>Número de telefono <span class="text-danger">*</span></label>
                                                     <input type="text" name="doctor_phone_no" id="doctor_phone_no" class="form-control" required  data-parsley-trigger="keyup" />
                                                 </div>
                                             </div>
@@ -76,11 +76,11 @@ include('header.php');
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Doctor Address </label>
+                                                    <label>Dirección </label>
                                                     <input type="text" name="doctor_address" id="doctor_address" class="form-control" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label>Doctor Date of Birth </label>
+                                                    <label>Fecha de nacimiento  </label>
                                                     <input type="text" name="doctor_date_of_birth" id="doctor_date_of_birth" readonly class="form-control" />
                                                 </div>
                                             </div>
@@ -88,17 +88,17 @@ include('header.php');
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Doctor Degree <span class="text-danger">*</span></label>
+                                                    <label>Estudios <span class="text-danger">*</span></label>
                                                     <input type="text" name="doctor_degree" id="doctor_degree" class="form-control" required data-parsley-trigger="keyup" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label>Doctor Speciality <span class="text-danger">*</span></label>
+                                                    <label>Especialidad <span class="text-danger">*</span></label>
                                                     <input type="text" name="doctor_expert_in" id="doctor_expert_in" class="form-control" required  data-parsley-trigger="keyup" />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label>Doctor Image <span class="text-danger">*</span></label>
+                                            <label>Imagen de perfil<span class="text-danger">*</span></label>
                                             <br />
                                             <input type="file" name="doctor_profile_image" id="doctor_profile_image" />
                                             <div id="uploaded_image"></div>

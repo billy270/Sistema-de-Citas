@@ -21,7 +21,7 @@ include('header.php');
 ?>
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Doctor Management</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Gestión de Docotres</h1>
 
                     <!-- DataTales Example -->
                     <span id="message"></span>
@@ -29,7 +29,7 @@ include('header.php');
                         <div class="card-header py-3">
                         	<div class="row">
                             	<div class="col">
-                            		<h6 class="m-0 font-weight-bold text-primary">Doctor List</h6>
+                            		<h6 class="m-0 font-weight-bold text-primary">Lista de Doctores</h6>
                             	</div>
                             	<div class="col" align="right">
                             		<button type="button" name="add_doctor" id="add_doctor" class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
@@ -41,14 +41,14 @@ include('header.php');
                                 <table class="table table-bordered" id="doctor_table" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Image</th>
-                                            <th>Email Address</th>
-                                            <th>Password</th>
-                                            <th>Doctor Name</th>
-                                            <th>Doctor Phone No.</th>
-                                            <th>Doctor Speciality</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
+                                            <th>Imagne de Perfil</th>
+                                            <th>Correo</th>
+                                            <th>Contraseña</th>
+                                            <th>Nombre</th>
+                                            <th>Número de teléfono</th>
+                                            <th>Especidad</th>
+                                            <th>Estado</th>
+                                            <th>Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -68,7 +68,7 @@ include('header.php');
     	<form method="post" id="doctor_form">
       		<div class="modal-content">
         		<div class="modal-header">
-          			<h4 class="modal-title" id="modal_title">Add Doctor</h4>
+          			<h4 class="modal-title" id="modal_title">Añadir Doctor</h4>
           			<button type="button" class="close" data-dismiss="modal">&times;</button>
         		</div>
         		<div class="modal-body">
@@ -76,11 +76,11 @@ include('header.php');
 		          	<div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Doctor Email Address <span class="text-danger">*</span></label>
+                                <label>Correo <span class="text-danger">*</span></label>
                                 <input type="text" name="doctor_email_address" id="doctor_email_address" class="form-control" required data-parsley-type="email" data-parsley-trigger="keyup" />
                             </div>
                             <div class="col-md-6">
-                                <label>Doctor Password <span class="text-danger">*</span></label>
+                                <label>Contraseña <span class="text-danger">*</span></label>
                                 <input type="password" name="doctor_password" id="doctor_password" class="form-control" required  data-parsley-trigger="keyup" />
                             </div>
 		          		</div>
@@ -88,11 +88,11 @@ include('header.php');
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Doctor Name <span class="text-danger">*</span></label>
+                                <label>Nombre <span class="text-danger">*</span></label>
                                 <input type="text" name="doctor_name" id="doctor_name" class="form-control" required data-parsley-trigger="keyup" />
                             </div>
                             <div class="col-md-6">
-                                <label>Doctor Phone No. <span class="text-danger">*</span></label>
+                                <label>Número de teléfono <span class="text-danger">*</span></label>
                                 <input type="text" name="doctor_phone_no" id="doctor_phone_no" class="form-control" required  data-parsley-trigger="keyup" />
                             </div>
                         </div>
@@ -100,11 +100,11 @@ include('header.php');
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Doctor Address </label>
+                                <label>Dirección </label>
                                 <input type="text" name="doctor_address" id="doctor_address" class="form-control" />
                             </div>
                             <div class="col-md-6">
-                                <label>Doctor Date of Birth </label>
+                                <label>Fecha de nacimiento</label>
                                 <input type="text" name="doctor_date_of_birth" id="doctor_date_of_birth" readonly class="form-control" />
                             </div>
                         </div>
@@ -112,17 +112,17 @@ include('header.php');
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Doctor Degree <span class="text-danger">*</span></label>
+                                <label>Estudios <span class="text-danger">*</span></label>
                                 <input type="text" name="doctor_degree" id="doctor_degree" class="form-control" required data-parsley-trigger="keyup" />
                             </div>
                             <div class="col-md-6">
-                                <label>Doctor Speciality <span class="text-danger">*</span></label>
+                                <label>Especialidad <span class="text-danger">*</span></label>
                                 <input type="text" name="doctor_expert_in" id="doctor_expert_in" class="form-control" required  data-parsley-trigger="keyup" />
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Doctor Image <span class="text-danger">*</span></label>
+                        <label>Imagen de perfil <span class="text-danger">*</span></label>
                         <br />
                         <input type="file" name="doctor_profile_image" id="doctor_profile_image" />
                         <div id="uploaded_image"></div>
@@ -131,9 +131,9 @@ include('header.php');
         		</div>
         		<div class="modal-footer">
           			<input type="hidden" name="hidden_id" id="hidden_id" />
-          			<input type="hidden" name="action" id="action" value="Add" />
-          			<input type="submit" name="submit" id="submit_button" class="btn btn-success" value="Add" />
-          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          			<input type="hidden" name="action" id="action" value="Añadir" />
+          			<input type="submit" name="submit" id="submit_button" class="btn btn-success" value="Añadir" />
+          			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         		</div>
       		</div>
     	</form>
@@ -144,14 +144,14 @@ include('header.php');
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="modal_title">View Doctor Details</h4>
+                <h4 class="modal-title" id="modal_title">Observar información del Doctor</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body" id="doctor_details">
                 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
@@ -278,7 +278,7 @@ $(document).ready(function(){
                 $('#doctor_degree').val(data.doctor_degree);
                 $('#doctor_expert_in').val(data.doctor_expert_in);
 
-	        	$('#modal_title').text('Edit Doctor');
+	        	$('#modal_title').text('Editar Doctor');
 
 	        	$('#action').val('Edit');
 
@@ -302,7 +302,7 @@ $(document).ready(function(){
 		{
 			next_status = 'Inactive';
 		}
-		if(confirm("Are you sure you want to "+next_status+" it?"))
+		if(confirm("AEstás seguro que quieres "+next_status+"?"))
     	{
 
       		$.ajax({
