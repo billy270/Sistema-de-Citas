@@ -12,7 +12,6 @@ if(!$object->is_login())
 }
 
 include('header.php');
-
 ?>
 
                     <!-- Page Heading -->
@@ -24,7 +23,7 @@ include('header.php');
                         <div class="card-header py-3">
                         	<div class="row">
                             	<div class="col">
-                            		<h6 class="m-0 font-weight-bold text-primary">Lista de horarios del Doctor</h6>
+                            		<h6 class="m-0 font-weight-bold text-primary">Lista de horarios del doctor</h6>
                             	</div>
                             	<div class="col" align="right">
                             		<button type="button" name="add_exam" id="add_doctor_schedule" class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
